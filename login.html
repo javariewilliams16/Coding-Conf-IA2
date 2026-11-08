@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Coding Conference</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Coding Conference</h1>
+        <p>Register here for the exciting conference</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Register Your Details Below</h2>
+
+            <p>
+                Complete the form below to receive
+                your thrilling Coding Conference 2026 ticket.
+            </p>
+
+            <form id="registrationForm" novalidate>
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName">
+
+                <p id="nameError" class="error"></p>
+
+
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email">
+
+                <p id="emailError" class="error"></p>
+
+                <label for="github">GitHub Username</label>
+                <input type="text" id="github" name="github" placeholder="@username">
+
+                <p id="githubError" class="error"></p>
+
+                <label for="avatar">Upload Profile Picture</label>
+                <input type="file" id="avatar" name="avatar" accept=".jpg,.jpeg,.png">
+
+                <p id="avatarError" class="error"></p>
+
+
+                <button type="submit">Generate My Ticket</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Coding Conference</p>
+    </footer>
+
+    <script src="../js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* General page styling */
+:root {
+    --background: #100b20;
+    --purple: #7928ca;
+    --white: #ffffff;
+    --light-purple: #c9a7ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* Header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #1c1233;
+}
+
+header h1 {
+    color: var(--light-purple);
+    font-size: 28px;
+}
+
+/* Main Content */
+main {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+section {
+    max-width: 700px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: clamp(28px, 5vw, 45px);
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #d4cbe5;
+}
+
+/* Register Button */
+section a {
+    display: inline-block;
+    background: var(--purple);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: 0.3;
+}
+
+/* Registration Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input {
+    padding: 12px;
+    border: 1px solid #9b55e8;
+    border-radius: 6px;
+    background: #1c1233;
+    color: white;
+    width: 100%;
+}
+
+form button {
+    padding: 13px;
+    background: #7928ca;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background: #9b55e8;
+}
+
+.error {
+    color: #ff7777;
+    font-size: 13px;
+}
+
+section a:hover{
+    background: #9b55e8;
+    transform: trasnlateY(-3px);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--light-purple);
+    outline-offset: 4px;
+}
+
+/* Ticket Confirmation page */
+.ticket-section {
+    width: 100%;
+    max-width: 650px;
+}
+
+.ticket-section > p {
+    margin-top: 10px;
+}
+
+.ticket {
+    background: rgba (121, 40, 202, 0.2);
+    border: 1px solid rgba (255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba (0, 0, 0, 0.3);
+}
+
+.ticket-header {
+    text-align: left;
+    border-bottom: 1px dashed white;
+    padding-bottom: 20px;
+}
+
+.ticket-header h2 {
+    color: #c9a7ff;
+    margin-bottom: 10px;
+}
+
+.ticket-detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.ticket-detail img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.ticket-number h3 {
+    font-size:25px;
+    letter-spacing: 3px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #c9a7ff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .ticket-detail {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ticket {
+        padding: 18px;
+    }
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1c1233;
+    color: #c9a7ff;
+}
+
+/* Mobile Screen Adjustment */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    section p {
+        font-size: 15px;
+    }
+}
